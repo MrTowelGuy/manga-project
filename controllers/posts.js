@@ -17,6 +17,5 @@ const Posts = require('../models/posts');
 
 //SHOW
 
-
 //signal out
 module.exports = router;
