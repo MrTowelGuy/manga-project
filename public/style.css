@@ -1,0 +1,11 @@
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* display: inline; */
+}
+
+li {
+    display: inline;
+    text-align: right;
+}
