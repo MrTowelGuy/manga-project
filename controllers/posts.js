@@ -4,44 +4,44 @@ const router = express.Router();
 const Posts = require('../models/posts');
 
 //INDEX
-router.get('/', (req,res) => {
-    Posts.find({}, (err, foundPosts) =>{
+router.get('/home', (req,res) => {
+    // Posts.find({}, (err, foundPosts) =>{
         res.render('/home(index).ejs', {
-            posts: foundPosts
+            // posts: foundPosts
         });
     });
-});
+// });
 
 //NEW
 router.get('/new', (req,res) => {
-    res.render('/new.ejs');
+    res.render('new.ejs');
 })
 
 //DELETE
 router.delete('/:id', (req,res) => {
     Posts.findByIdAndRemove(req.params.id, () => {
-        res.redirect('/')
+        res.redirect('/home')
     });
 });
 
 //UPDATE
 router.put('/:id', (req,res) =>{
     Posts.findByIdAndUpdate(req.params.id, req.body, () =>{
-        res.redirect('/');
+        res.redirect('/home');
     });
 });
 
 //CREATE
-router.post('/', (req, res) => {
+router.post('/home', (req, res) => {
     Posts.create(req.body, (err, createdPosts) => {
-        res.redirect('/');
+        res.redirect('/home');
     });
 });
 
 //EDIT
 router.get('/:id/edit', (req,res) =>{
     Posts.findById(req.params.id, (err, foundPosts) =>{
-        res.render('/edit.ejs', {
+        res.render('edit.ejs', {
             posts: foundPosts
         });
     });
@@ -49,8 +49,8 @@ router.get('/:id/edit', (req,res) =>{
 
 //SHOW
 router.get('/:id', (req, res) => {
-    posts.findById(req.params.id, (err, foundPosts) => {
-        res.render('/show(postpage).ejs', {
+    Posts.findById(req.params.id, (err, foundPosts) => {
+        res.render('show(postpage).ejs', {
             posts: foundPosts
         });
     });

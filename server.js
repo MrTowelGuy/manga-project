@@ -12,10 +12,12 @@ mongoose.connect(process.env.DATABASE_URL)
 //middleware
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
-app.use('/posts', postsController)
+app.use(express.static('public'));
+app.use('/posts', postsController);
+
 
 //root route
-app.get('/', (req,res) => {
+app.get('/home', (req,res) => {
     res.render('home(index).ejs')
 });
 
@@ -24,6 +26,8 @@ const db = mongoose.connection;
 db.on('error',(err) => console.log(err.message + ' mongo is not running!!'));
 db.on('connected', ()=> console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
+
+app.use('/', postsController);
 
 //our listener!
 app.listen(port, () => {
