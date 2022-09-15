@@ -1,11 +1,31 @@
-.nav-bar{
-    display: flex;
+/* .nav-bar {
+    display: inline;
+} */
+
+/* .nav-buttons{
+    display: inline;
+} */
+
+/* .nav-bar{
     flex-direction: row;
     flex-wrap: nowrap;
-    /* display: inline; */
+    justify-content: space-between;
+} */
+
+#home-button{
+    text-align: left;
 }
 
-.header-buttons {
-    display: inline;
+#new-button{
     text-align: right;
+    justify-content: right;
+}
+
+#profile-button{
+    text-align: right;
+    justify-content: right;
+}
+
+li{
+    list-style: none;
 }

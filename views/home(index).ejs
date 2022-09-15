@@ -10,15 +10,17 @@
 <body>
     <nav id="header">
         <div class="nav-bar">
-            <a href="/home">home</a>
-            <ul class="header-buttons">
-                <li>
-                    <a href="/new">New Post</a>
-                </li>
-                <li>
-                    <a href="/profile">profile</a>
-                </li>
-            </ul>
+            <!-- <ul class="header-buttons"> -->
+                <!-- <li class="nav-buttons"> -->
+                    <a class="header-buttons" id='home-button' href="/home">Home</a></br>
+                <!-- </li> -->
+                <!-- <li class="nav-buttons"> -->
+                    <a class="header-buttons" id='new-button'href="/new">New Post</a></br>
+                <!-- </li> -->
+                <!-- <li class="nav-buttons"> -->
+                    <a class="header-buttons" id='profile-button'href="/profile">Profile</a></br>
+                <!-- </li> -->
+            <!-- </ul> -->
         </div>
     </nav>
     <main>
@@ -29,6 +31,7 @@
                     <a href=""><%=posts[i].pfp %> </a></br>
                     <a href=""><%=posts[i].img %> </a></br>
                     <p><%=posts[i].description %> </p></br>
+                    <a href="/views/show(postpage).ejs">Full User Review</a>
                 </li>
                 <% } %>  
         </ul>

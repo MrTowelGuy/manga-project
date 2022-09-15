@@ -11,26 +11,29 @@
 <body>
     <nav id="header">
         <div class="nav-bar">
-            <a href="/home">home</a>
             <ul class="header-buttons">
-                <li>
-                    <a href="/new">New Post</a>
+                <li class="nav-buttons">
+                    <a  id='home-button' href="/home">Home</a>
                 </li>
-                <li>
-                    <a href="/profile">profile</a>
+                <li class="nav-buttons">
+                    <a id='new-button'href="/new">New Post</a>
+                </li>
+                <li class="nav-buttons">
+                    <a id='profile-button'href="/profile">Profile</a>
                 </li>
             </ul>
         </div>
     </nav>
     <header>
-        <h1>Make a Post!</h1>
+        <h1>New Post</h1>
     </header>
     <main>
         <form action="/home" method="POST">
-            <input type="text" name="username" />
-            <input type="text" name="pfp" />
-            <input type="text" name="img" />
-            <input type="text" name="description" />
+            <input type="text" placeholder="What's your username?" name="username" /></br>
+            <input type="text" placeholder="avatar img URL"name="pfp" /></br>
+            <input type="text" placeholder="Manga Cover img URL" name="img" /></br>
+            <input type="text" placeholder="Brief description"name="description" /></br>
+            <textarea name="review" placeholder="Leave your full review here!"></textarea>
             <input type="submit" value="Post!" />
         </form>
     </main>

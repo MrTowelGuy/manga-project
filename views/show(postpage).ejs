@@ -10,16 +10,30 @@
 <body>
     <nav id="header">
         <div class="nav-bar">
-            <a href="/home">home</a>
             <ul class="header-buttons">
-                <li>
-                    <a href="/new">New Post</a>
+                <li class="nav-buttons">
+                    <a  id='home-button' href="/home">Home</a>
                 </li>
-                <li>
-                    <a href="/profile">profile</a>
+                <li class="nav-buttons">
+                    <a id='new-button'href="/new">New Post</a>
+                </li>
+                <li class="nav-buttons">
+                    <a id='profile-button'href="/profile">Profile</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <main>
+        <ul>
+            <% for(let i = 0; i < posts.length; i++){ %>
+                <li>
+                    <a href=""><%=posts[i].username %></a></br>
+                    <a href=""><%=posts[i].pfp %> </a></br>
+                    <a href=""><%=posts[i].img %> </a></br>
+                    <p><%=posts[i].review %> </p></br>
+                </li>
+                <% } %>  
+        </ul>
+    </main>
 </body>
 </html>

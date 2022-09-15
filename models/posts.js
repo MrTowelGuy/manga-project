@@ -6,6 +6,7 @@ const postSchema = new Schema ({
     pfp: String,
     img: String,
     description: String,
+    review: String
 })
 
 const Posts = mongoose.model('Posts', postSchema);

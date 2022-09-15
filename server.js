@@ -23,7 +23,7 @@ app.use(express.static('public'));
 // });
 app.get('/home', (req,res) => {
     Posts.find({}, (err, foundPosts) =>{
-        console.log(foundPosts)
+        // console.log(foundPosts)
         res.render('home(index).ejs', {
             posts: foundPosts
         });
