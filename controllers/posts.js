@@ -3,14 +3,8 @@ const express = require('express');
 const router = express.Router();
 const Posts = require('../models/posts');
 
-//INDEX
-router.get('/home', (req,res) => {
-    // Posts.find({}, (err, foundPosts) =>{
-        res.render('/home(index).ejs', {
-            // posts: foundPosts
-        });
-    });
-// });
+//INDEX 
+// index route is in my server.js
 
 //NEW
 router.get('/new', (req,res) => {

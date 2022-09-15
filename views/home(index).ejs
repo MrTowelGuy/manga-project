@@ -23,7 +23,14 @@
     </nav>
     <main>
         <ul>
-
+            <% for(let i = 0; i < posts.length; i++){ %>
+                <li>
+                    <a href=""><%=posts[i].username %></a></br>
+                    <a href=""><%=posts[i].pfp %> </a></br>
+                    <a href=""><%=posts[i].img %> </a></br>
+                    <p><%=posts[i].description %> </p></br>
+                </li>
+                <% } %>  
         </ul>
     </main>
 </body>

@@ -5,7 +5,7 @@
     /* display: inline; */
 }
 
-li {
+.header-buttons {
     display: inline;
     text-align: right;
 }

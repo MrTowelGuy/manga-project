@@ -1,10 +1,11 @@
 const express = require('express');
 require('dotenv').config();
-const methodOverride = require('method-override');
 const app = express();
 const mongoose = require('mongoose')
 const postsController = require('./controllers/posts');
+const Posts = require('./models/posts')
 const port = 3000;
+const methodOverride = require('method-override');
 
 //database config
 mongoose.connect(process.env.DATABASE_URL)
@@ -13,12 +14,20 @@ mongoose.connect(process.env.DATABASE_URL)
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-app.use('/posts', postsController);
+// app.use('/posts', postsController);
 
 
 //root route
+// app.get('/home', (req,res) => {
+//     res.render('home(index).ejs')
+// });
 app.get('/home', (req,res) => {
-    res.render('home(index).ejs')
+    Posts.find({}, (err, foundPosts) =>{
+        console.log(foundPosts)
+        res.render('home(index).ejs', {
+            posts: foundPosts
+        });
+    });
 });
 
 //database connection error/success
