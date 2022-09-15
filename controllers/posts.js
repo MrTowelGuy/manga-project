@@ -12,9 +12,9 @@ router.get('/new', (req,res) => {
 })
 
 //DELETE
-router.delete('/:id', (req,res) => {
+router.delete('/home/:id', (req,res) => {
     Posts.findByIdAndRemove(req.params.id, () => {
-        res.redirect('/home')
+        res.redirect('/home');
     });
 });
 

@@ -17,6 +17,7 @@ app.use(express.static('public'));
 // app.use('/posts', postsController);
 
 
+
 //root route
 // app.get('/home', (req,res) => {
 //     res.render('home(index).ejs')
