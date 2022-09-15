@@ -17,14 +17,16 @@
                 <li class="nav-buttons">
                     <a id='new-button'href="/new">New Post</a>
                 </li>
-                <li class="nav-buttons">
-                    <a id='profile-button'href="/profile">Profile</a>
-                </li>
             </ul>
         </div>
     </nav>
-    <main>
-
-    </main>
+<main>
+    <li>
+        <a href="./profile.ejs"><img id="pfp"src="<%=posts.pfp %>"> </a>
+        <a href="./profile.ejs"><%=posts.username %></a></br>
+        <img id="show-post-img"src="<%=posts.img %>"></br>
+        <p><%= posts.review %> </p>
+    </li>
+</main>
 </body>
 </html>

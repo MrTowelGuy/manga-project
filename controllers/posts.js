@@ -13,13 +13,13 @@ router.get('/new', (req,res) => {
 
 //DELETE
 router.delete('/home/:id', (req,res) => {
-    Posts.findByIdAndRemove(req.params.id, () => {
+    Posts.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/home');
     });
 });
 
 //UPDATE
-router.put('/:id', (req,res) =>{
+router.put('/home/:id', (req,res) =>{
     Posts.findByIdAndUpdate(req.params.id, req.body, () =>{
         res.redirect('/home');
     });
@@ -33,7 +33,7 @@ router.post('/home', (req, res) => {
 });
 
 //EDIT
-router.get('/:id/edit', (req,res) =>{
+router.get('/home/:id/edit', (req,res) =>{
     Posts.findById(req.params.id, (err, foundPosts) =>{
         res.render('edit.ejs', {
             posts: foundPosts
@@ -44,6 +44,7 @@ router.get('/:id/edit', (req,res) =>{
 //SHOW
 router.get('/:id', (req, res) => {
     Posts.findById(req.params.id, (err, foundPosts) => {
+        console.log(foundPosts)
         res.render('show(postpage).ejs', {
             posts: foundPosts
         });

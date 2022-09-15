@@ -12,20 +12,48 @@
     justify-content: space-between;
 } */
 
+#header{
+    padding: 20px;
+    /* margin-top: 30px; */
+}
+
 #home-button{
-    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
 #new-button{
-    text-align: right;
-    justify-content: right;
+    position: absolute;
+    top: 10px;
+    right: 70px;
 }
 
 #profile-button{
-    text-align: right;
-    justify-content: right;
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
 
 li{
     list-style: none;
+}
+
+#post-object{
+    text-align: center;
+    padding: 20px;
+
+}
+
+#pfp{
+    max-width: 30px;
+    border-radius: 50%;
+    outline: 2px solid  black;
+
+}
+
+#post-img{
+    max-width: 600px;
+    border-radius: 8px;
+    outline: 1.5px solid black;
 }

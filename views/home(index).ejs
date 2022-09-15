@@ -18,7 +18,6 @@
                     <a class="header-buttons" id='new-button'href="/new">New Post</a></br>
                 <!-- </li> -->
                 <!-- <li class="nav-buttons"> -->
-                    <a class="header-buttons" id='profile-button'href="/profile">Profile</a></br>
                 <!-- </li> -->
             <!-- </ul> -->
         </div>
@@ -26,15 +25,16 @@
     <main>
         <ul>
             <% for(let i = 0; i < posts.length; i++){ %>
-                <li>
-                    <form action="/home/<%=posts[i]._id%>?method=DELETE" method="DELETE">
+                <li id="post-object">
+                    <form action="/home/<%=posts[i]._id%>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>
                     </form>
-                    <a href=""><%=posts[i].username %></a></br>
-                    <a href=""><%=posts[i].pfp %> </a></br>
-                    <a href=""><%=posts[i].img %> </a></br>
-                    <p><%=posts[i].description %> </p></br>
-                    <a href="/views/show(postpage).ejs">Full User Review</a>
+                    <a href="/home/<%=posts[i]._id%>/edit"><button>Edit</button></a>
+                    <img id="pfp"src="<%=posts[i].pfp %>">
+                    <p><%=posts[i].username %></p></br>
+                    <a href="/<%= posts[i]._id %> "><img id="post-img"src="<%=posts[i].img %>"></a></br>
+                    <div><p><%=posts[i].username %></p><p><%=posts[i].description %> </p></div></br>
+                    <a href="/<%= posts[i]._id %> ">Full User Review</a>
                 </li>
                 <% } %>  
         </ul>

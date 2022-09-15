@@ -8,6 +8,29 @@
     <title>weebLine</title>
 </head>
 <body>
-    
+    <header>
+        <nav id="header">
+            <div class="nav-bar">
+                <!-- <ul class="header-buttons"> -->
+                    <!-- <li class="nav-buttons"> -->
+                        <a class="header-buttons" id='home-button' href="/home">Home</a></br>
+                        <!-- </li> -->
+                        <!-- <li class="nav-buttons"> -->
+                            <a class="header-buttons" id='new-button'href="/new">New Post</a></br>
+                            <!-- </li> -->
+                            <!-- <li class="nav-buttons"> -->
+                                <!-- </li> -->
+                                <!-- </ul> -->
+                            </div>
+                        </nav>
+                    </header>
+    <main>
+        <h1>Edit Post</h1>
+        <form action="/home/<%= posts._id %>?_method=PUT" method="POST">
+            <input type="text" name="description" value="<%= posts.description %>" /><br />
+            <input type="text" name="review" value="<%= posts.review %>" /><br />
+            <input type="submit" value="Update" />
+        </form>
+    </main>
 </body>
 </html>
