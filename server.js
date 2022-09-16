@@ -1,4 +1,6 @@
 const express = require('express');
+// const favicon = require('serve-favicon')
+// const path = require('path')
 require('dotenv').config();
 const app = express();
 const mongoose = require('mongoose')
@@ -14,6 +16,8 @@ mongoose.connect(process.env.DATABASE_URL)
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
 // app.use('/posts', postsController);
 
 

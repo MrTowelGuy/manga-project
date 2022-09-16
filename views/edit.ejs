@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
+    <link rel="icon" href="/text-1663258797636.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+
     <title>weebLine</title>
 </head>
 <body>
@@ -13,10 +18,10 @@
             <div class="nav-bar">
                 <!-- <ul class="header-buttons"> -->
                     <!-- <li class="nav-buttons"> -->
-                        <a class="header-buttons" id='home-button' href="/home">Home</a></br>
+                        <a class="header-buttons" href="/home"><img id='home-button'src="https://see.fontimg.com/api/renderfont4/xJB8/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/d2VlYkxpbmUu/timeburner.png" alt="Home"></a></br>
                         <!-- </li> -->
                         <!-- <li class="nav-buttons"> -->
-                            <a class="header-buttons" id='new-button'href="/new">New Post</a></br>
+                            <a class="header-buttons" href="/new"><img id='new-button' src="https://static.thenounproject.com/png/3874122-200.png"/></a></br>
                             <!-- </li> -->
                             <!-- <li class="nav-buttons"> -->
                                 <!-- </li> -->
@@ -27,8 +32,9 @@
     <main>
         <h1>Edit Post</h1>
         <form action="/home/<%= posts._id %>?_method=PUT" method="POST">
+            <input type="text" name="manga" value="<%= posts.manga %>" /><br />
             <input type="text" name="description" value="<%= posts.description %>" /><br />
-            <input type="text" name="review" value="<%= posts.review %>" /><br />
+            <textarea name="review" value="<%= posts.review %>"></textarea><br />
             <input type="submit" value="Update" />
         </form>
     </main>

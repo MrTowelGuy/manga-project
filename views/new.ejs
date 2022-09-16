@@ -5,6 +5,10 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Users/jaden/Desktop/School/Unit_2/project_2/text-1663258797636.png">
     <title>weebLine</title>
 </head>
 
@@ -13,12 +17,12 @@
         <div class="nav-bar">
             <ul class="header-buttons">
                 <li class="nav-buttons">
-                    <a  id='home-button' href="/home">Home</a>
+                    <a class="header-buttons" href="/home"><img id='home-button'src="https://see.fontimg.com/api/renderfont4/xJB8/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/d2VlYkxpbmUu/timeburner.png" alt="Home"></a></br>                
                 </li>
                 <li class="nav-buttons">
-                    <a id='new-button'href="/new">New Post</a>
+                    <a class="header-buttons" href="/new"><img id='new-button' src="https://static.thenounproject.com/png/3874122-200.png"/></a></br>
                 </li>
-            </ul>
+                </ul>
         </div>
     </nav>
     <header>
@@ -26,13 +30,15 @@
     </header>
     <main>
         <form action="/home" method="POST">
-            <input type="text" placeholder="What's your username?" name="username" /></br>
-            <input type="text" placeholder="avatar img URL"name="pfp" /></br>
-            <input type="text" placeholder="Manga Cover img URL" name="img" /></br>
-            <input type="text" placeholder="Brief description"name="description" /></br>
-            <textarea name="review" placeholder="Leave your full review here!"></textarea>
-            <input type="submit" value="Post!" />
+            <input id="new-user"type="text" placeholder="What's your username?" name="username" /></br>
+            <input id="new-pfp"type="text" placeholder="avatar img URL"name="pfp" /></br>
+            <input id="new-cover"type="text" placeholder="Manga Cover img URL" name="img" /></br>
+            <input id="new-manga-name"type="text" placeholder="Manga name"name="manga" /></br>
+            <input id="new-description"type="text" placeholder="Brief description"name="description" /></br>
+            <textarea id="new-review"name="review" placeholder="Leave your full review here!"></textarea>
+            <input id="submit-button"type="submit" value="Post!" />
         </form>
+        <!-- <img id="new-img"src="https://mediaproxy.tvtropes.org/width/350/https://static.tvtropes.org/pmwiki/pub/images/saitama_ok.jpg" alt=""> -->
     </main>
 </body>
 

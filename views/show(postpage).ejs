@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Users/jaden/Desktop/School/Unit_2/project_2/text-1663258797636.png">
     <title>weebLine</title>
 </head>
 <body>
@@ -12,21 +16,31 @@
         <div class="nav-bar">
             <ul class="header-buttons">
                 <li class="nav-buttons">
-                    <a  id='home-button' href="/home">Home</a>
+                    <a class="header-buttons" href="/home"><img id='home-button'src="https://see.fontimg.com/api/renderfont4/xJB8/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/d2VlYkxpbmUu/timeburner.png" alt="Home"></a></br>                
                 </li>
                 <li class="nav-buttons">
-                    <a id='new-button'href="/new">New Post</a>
+                    <a class="header-buttons" href="/new"><img id='new-button' src="https://static.thenounproject.com/png/3874122-200.png"/></a></br>
                 </li>
             </ul>
         </div>
     </nav>
 <main>
+<div class="show-container-main">
+    <div class="show-container">
     <li>
-        <a href="./profile.ejs"><img id="pfp"src="<%=posts.pfp %>"> </a>
-        <a href="./profile.ejs"><%=posts.username %></a></br>
-        <img id="show-post-img"src="<%=posts.img %>"></br>
-        <p><%= posts.review %> </p>
+        <div class="user-profile">
+            <img class="above-img"id="pfp"src="<%=posts.pfp %>">
+            <p id="user-name" class="username-class"class="above-img"><%=posts.username %></p></br>
+            </div>
+            
+            <a href="/<%= posts._id %> "><img id="post-img"src="<%=posts.img %>"></a></br>    
+        <div class="bottom-text">
+            <p id="show-manga"><%= posts.manga %>: </p><br>
+            <p id="show-review"><%= posts.review %> </p>
+        </div>
     </li>
+    </div>
+</div>
 </main>
 </body>
 </html>
