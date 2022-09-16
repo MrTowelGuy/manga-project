@@ -44,7 +44,6 @@ router.get('/home/:id/edit', (req,res) =>{
 //SHOW
 router.get('/:id', (req, res) => {
     Posts.findById(req.params.id, (err, foundPosts) => {
-        console.log(foundPosts)
         res.render('show(postpage).ejs', {
             posts: foundPosts
         });
@@ -53,3 +52,5 @@ router.get('/:id', (req, res) => {
 
 //signal out
 module.exports = router;
+
+//PROJECT DONE
