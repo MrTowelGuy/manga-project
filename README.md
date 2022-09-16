@@ -1,6 +1,6 @@
 # Read Me For Manga Project (project 2)
 
-![weebLine.](https://imgur.com/a/Y58haEJ)
+![weebLine.](https://i.imgur.com/HpNtGzk.png)
 
 
 ---
