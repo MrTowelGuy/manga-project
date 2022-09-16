@@ -1,0 +1,65 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER NAV BAR*/
+#home-button-edit{
+    max-width: 200px;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+#new-button-edit{
+    max-width: 60px;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+}
+#header{
+    padding: 20px;
+    border-bottom: 1.5px solid rgb(0, 0, 0);
+}
+
+/* BELOW NAVBAR */
+
+#new-manga-name{
+    position: absolute;
+    width: 325px;
+    left: 70px;
+    top: 150px;
+    border-radius: 5px;
+}
+
+#new-description{
+    position: absolute;
+    width: 325px;
+    left: 70px;
+    top: 190px;
+    border-radius: 5px;
+}
+
+#new-review{
+    position: absolute;
+    left: 70px;
+    top: 230px;
+    border-radius: 5px;
+    resize: none;
+    width: 325px;
+    height: 496px;
+}
+
+#submit-button{
+    position: absolute;
+    left: 70px;
+    top: 750px;
+    border-radius: 5px;
+}
+
+/* fun image tinkering */
+
+img{
+    position: absolute;
+    right: 198px;
+    top: 134px;
+    max-width: 420px;
+}

@@ -4,11 +4,11 @@
     <link rel="icon" href="/text-1663258797636.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/edit-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
 
     <title>weebLine</title>
 </head>
@@ -18,25 +18,24 @@
             <div class="nav-bar">
                 <!-- <ul class="header-buttons"> -->
                     <!-- <li class="nav-buttons"> -->
-                        <a class="header-buttons" href="/home"><img id='home-button'src="https://see.fontimg.com/api/renderfont4/xJB8/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/d2VlYkxpbmUu/timeburner.png" alt="Home"></a></br>
-                        <!-- </li> -->
+                        <a class="header-buttons" href="/home"><img id='home-button-edit'src="https://see.fontimg.com/api/renderfont4/xJB8/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/d2VlYkxpbmUu/timeburner.png" alt="Home"></a></br>                <!-- </li> -->
+                    <!-- <li class="nav-buttons"> -->
+                        <a class="header-buttons" href="/new"><img id='new-button-edit' src="https://static.thenounproject.com/png/3874122-200.png"/></a></br>
                         <!-- <li class="nav-buttons"> -->
-                            <a class="header-buttons" href="/new"><img id='new-button' src="https://static.thenounproject.com/png/3874122-200.png"/></a></br>
-                            <!-- </li> -->
-                            <!-- <li class="nav-buttons"> -->
-                                <!-- </li> -->
-                                <!-- </ul> -->
-                            </div>
-                        </nav>
-                    </header>
+                    <!-- </li> -->
+                <!-- </ul> -->
+            </div>
+        </nav>
+    </header>
     <main>
-        <h1>Edit Post</h1>
+        <!-- <h1>Edit Post</h1> -->
         <form action="/home/<%= posts._id %>?_method=PUT" method="POST">
-            <input type="text" name="manga" value="<%= posts.manga %>" /><br />
-            <input type="text" name="description" value="<%= posts.description %>" /><br />
-            <textarea name="review" value="<%= posts.review %>"></textarea><br />
-            <input type="submit" value="Update" />
+            <input id="new-manga-name" type="text" name="manga" value="<%= posts.manga %>" /><br />
+            <input id="new-description"type="text" name="description" value="<%= posts.description %>" /><br />
+            <textarea id="new-review"name="review" value="<%= posts.review %>" placeholder="Edit your review!"></textarea><br />
+            <input id="submit-button"type="submit" value="Update" />
         </form>
+        <img src="https://i.pinimg.com/originals/21/4f/89/214f89296470dafeaac240d01e7bd23a.png" alt="hana">
     </main>
 </body>
 </html>

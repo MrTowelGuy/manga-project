@@ -1,14 +1,15 @@
-
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 
 .username-class{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     margin: none;
 }
-/* header nav bar */
+
 #header{
     padding: 20px;
-    /* margin-top: 30px; */
     border-bottom: 1.5px solid rgb(0, 0, 0);
 }
 
@@ -145,10 +146,6 @@ align-items: center;
     justify-content: center;
 }
 
-/* .nav-bar:hover{
-    transform: scale(1.005);
-    transition: all 0.3s ease 0s;
-} */
 
 #full-review{
     text-decoration: none;
@@ -159,6 +156,7 @@ align-items: center;
     transition: all 0.3s ease 0s;
     color:rgb(0, 0, 0);   
 }
+
 
 
 /* ul li and whole object */
@@ -251,4 +249,4 @@ ul{
     grid-column: 1;
 }
 
-/* PROJECT DONE */
+/* PROJECT DONE */ 

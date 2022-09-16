@@ -37,11 +37,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use('/', postsController);
 
 //our listener!
-// app.listen(port, () => {
-//     console.log(`it's me, ya boy on port ${port}`)
-// });
-
 app.listen(PORT, () => 
-    console.log('express is listening on:', PORT));
+    console.log("It's me, ya boy on port:", PORT));
 
 //PROJECT DONE
