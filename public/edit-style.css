@@ -58,8 +58,6 @@ body{
 /* fun image tinkering */
 
 img{
-    position: absolute;
-    right: 198px;
-    top: 134px;
-    max-width: 420px;
+    justify-content: right;
+    max-width: 600px;
 }
